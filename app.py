@@ -13,26 +13,26 @@ app = Flask(__name__)
 VERIFICATION_TOKEN = "D6qSdGSjCmvYFzPbqeZdse7r8Z5uMVB4JBOsF0dBz2IaOe_aMW"
 ENDPOINT_URL = "https://ebay-deletion-endpoint-n6ky.onrender.com"
 
-# @app.route('/ebay-deletion-endpoint', methods=['GET', 'POST'])
-# def ebay_deletion_endpoint():
-#     logger.info(f"Incoming {request.method} to {request.url}")
-#     """
-#     Endpoint to handle eBay marketplace account deletion notifications
-#     - GET: Handle challenge code validation
-#     - POST: Handle actual deletion notifications
-#     """
-#     try:
-#         if request.method == 'GET':
-#             return handle_challenge_code()
-#         elif request.method == 'POST':
-#             return handle_deletion_notification()
-#     except Exception as e:
-#         logger.error(f"Error in endpoint: {str(e)}")
-#         return jsonify({"error": "Internal server error"}), 500
+@app.route('/ebay-deletion-endpoint', methods=['GET', 'POST'])
+def ebay_deletion_endpoint():
+    logger.info(f"Incoming {request.method} to {request.url}")
+    """
+    Endpoint to handle eBay marketplace account deletion notifications
+    - GET: Handle challenge code validation
+    - POST: Handle actual deletion notifications
+    """
+    try:
+        if request.method == 'GET':
+            return handle_challenge_code()
+        elif request.method == 'POST':
+            return handle_deletion_notification()
+    except Exception as e:
+        logger.error(f"Error in endpoint: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
-@app.route('/ebay-deletion-endpoint')
-def test():
-    return jsonify({"ok": True})
+# @app.route('/ebay-deletion-endpoint')
+# def test():
+#     return jsonify({"ok": True})
 
 
 def handle_challenge_code():
