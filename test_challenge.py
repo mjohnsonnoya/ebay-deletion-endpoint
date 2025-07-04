@@ -4,7 +4,7 @@ import json
 
 # Test configuration
 VERIFICATION_TOKEN = "D6qSdGSjCmvYFzPbqeZdse7r8Z5uMVB4JBOsF0dBz2IaOe_aMW"
-ENDPOINT_URL = "https://ebay-deletion-endpoint-n6ky.onrender.com/"
+ENDPOINT_URL = "https://ebay-deletion-endpoint-n6ky.onrender.com/ebay-deletion-endpoint"
 LOCAL_TEST_URL = "http://localhost:5001/ebay-deletion-endpoint"
 
 def test_challenge_response():

@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Configuration - Replace these with your actual values
 VERIFICATION_TOKEN = "D6qSdGSjCmvYFzPbqeZdse7r8Z5uMVB4JBOsF0dBz2IaOe_aMW"
-ENDPOINT_URL = "https://ebay-deletion-endpoint-n6ky.onrender.com"
+ENDPOINT_URL = "https://ebay-deletion-endpoint-n6ky.onrender.com/ebay-deletion-endpoint"
 
 @app.route('/ebay-deletion-endpoint', methods=['GET', 'POST'])
 def ebay_deletion_endpoint():
